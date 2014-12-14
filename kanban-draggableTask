@@ -1,0 +1,9 @@
+关于kanban中的拖放问题，有了一个进展：
+
+          autoLoadingTimer.start(); //进入编辑状态，关闭了timer，退出编辑状态是在这里start
+          var from_status =  $("#id_" + id).parent().get(0).id;
+          draggableTask.startByElem($("#"+from_status)); //draggableTask.startByElem($('#id_' + id ).parent());
+          utility.toggleDisplay('edit_form_ms_' + id ,'edit_link_ms_' + id );
+
+          return false;
+          
